@@ -26,6 +26,8 @@ Selectize.define('select_all_filtered', function (options) {
 				self.addItems(self.visibleOptionModel.items.map(function (value) {
 					return value.id;
 				}));
+				self.setTextboxValue('');
+				self.open();
 			});
 		};
 	})();

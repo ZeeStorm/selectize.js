@@ -2821,6 +2821,8 @@
 					self.addItems(self.visibleOptionModel.items.map(function (value) {
 						return value.id;
 					}));
+					self.setTextboxValue('');
+					self.open();
 				});
 			};
 		})();
