@@ -24,7 +24,7 @@ module.exports = function(grunt) {
 		'clean_bootstrap2_css',
 		'replace',
 		'build_standalone',
-		'uglify',
+		// 'uglify',
 		'clean:post',
 	]);
 

@@ -20,7 +20,7 @@
 		<div id="wrapper">
 			<h1>Selectize.js</h1>
 
-			<div class="demo">
+			<!-- <div class="demo">
 				<h2>&lt;input type="text"&gt;</h2>
 				<div class="control-group">
 					<label for="input-tags">Tags:</label>
@@ -96,7 +96,7 @@
 					sortField: {field: 'text'}
 				});
 				</script>
-			</div>
+			</div> -->
 
 			<div class="demo">
 				<h2>&lt;select multiple&gt;</h2>
@@ -108,7 +108,7 @@
 						<option value="AK">Alaska</option>
 						<option value="AZ">Arizona</option>
 						<option value="AR">Arkansas</option>
-						<option value="CA" selected>California</option>
+						<option value="CA">California</option>
 						<option value="CO">Colorado</option>
 						<option value="CT">Connecticut</option>
 						<option value="DE">Delaware</option>
@@ -154,16 +154,16 @@
 						<option value="WA">Washington</option>
 						<option value="WV">West Virginia</option>
 						<option value="WI">Wisconsin</option>
-						<option value="WY" selected>Wyoming</option>
+						<option value="WY">Wyoming</option>
 					</select>
 				</div>
 				<script>
 				$('#select-state').selectize({
-					maxItems: 3
+					plugins: ['select_all_filtered']
 				});
 				</script>
 			</div>
-			<div class="demo">
+			<!-- <div class="demo">
 				<div class="control-group">
 					<label for="select-country">Country:</label>
 					<select id="select-country" class="demo-default" placeholder="Select a country...">
@@ -419,10 +419,10 @@
 				<script>
 				$('#select-country').selectize();
 				</script>
-			</div>
+			</div> -->
 
 
-			<div class="demo">
+			<!-- <div class="demo">
 				<h2>&lt;select multiple&gt; (disabled)</h2>
 				<div class="control-group">
 					<label for="select-state-disabled">States:</label>
@@ -486,7 +486,7 @@
 					maxItems: 3
 				});
 				</script>
-			</div>
+			</div> -->
 		</div>
 	</body>
 </html>

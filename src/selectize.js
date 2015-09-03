@@ -1037,6 +1037,7 @@ $.extend(Selectize.prototype, {
 		var results           = self.search(query);
 		var $dropdown_content = self.$dropdown_content;
 		var active_before     = self.$activeOption && hash_key(self.$activeOption.attr('data-value'));
+		self.visibleOptionModel = results;
 
 		// build markup
 		n = results.items.length;
