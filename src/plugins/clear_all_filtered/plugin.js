@@ -25,6 +25,7 @@ Selectize.define('clear_all_filtered', function (options) {
 				e.preventDefault();
 				self.clear();
 				self.setTextboxValue('');
+				self.focus();
 				self.open();
 			});
 		};

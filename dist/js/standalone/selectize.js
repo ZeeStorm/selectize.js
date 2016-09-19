@@ -3430,6 +3430,7 @@
 					e.preventDefault();
 					self.clear();
 					self.setTextboxValue('');
+					self.focus();
 					self.open();
 				});
 			};
