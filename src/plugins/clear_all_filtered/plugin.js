@@ -33,7 +33,7 @@ Selectize.define('clear_all_filtered', function (options) {
 	this.onBlur = (function () {
 		var original = self.onBlur;
 		return function (e, dest) {
-			if (!dest || dest === $('.' + options.clearAllButtonClass)[0]) {
+			if (!dest || $(dest).is('.' + options.clearAllButtonClass)) {
 				if (e) {
 					e.preventDefault();
 				}

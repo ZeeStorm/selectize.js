@@ -2792,15 +2792,15 @@
 		validity: SUPPORTS_VALIDITY_API
 	};
 
-	
-	
+
+
 	Selectize.define('clear_all_filtered', function (options) {
 		var self = this;
-	
+
 		options = $.extend({
 			buttonContainerClass: 'selectize-clear-all-button-container',
 			clearAllButtonClass: 'selectize-clear-all-button',
-	
+
 			html: function (data) {
 				return (
 					'<div class="' + data.buttonContainerClass + '">' +
@@ -2809,14 +2809,14 @@
 				);
 			}
 		}, options);
-	
+
 		this.setup = (function () {
 			var original = self.setup;
 			return function () {
 				original.apply(this, arguments);
 				self.$clearAllContainer = $(options.html(options));
 				self.$dropdown.prepend(self.$clearAllContainer);
-	
+
 				self.$clearAllContainer.on('click', '.' + options.clearAllButtonClass, function (e) {
 					e.preventDefault();
 					self.clear();
@@ -2825,11 +2825,11 @@
 				});
 			};
 		})();
-	
+
 		this.onBlur = (function () {
 			var original = self.onBlur;
 			return function (e, dest) {
-				if (!dest || dest === $('.' + options.clearAllButtonClass)[0]) {
+				if (!dest || $(dest).is('.' + options.clearAllButtonClass)) {
 					if (e) {
 						e.preventDefault();
 					}
@@ -2839,8 +2839,8 @@
 			};
 		})();
 	});
-	
-	
+
+
 	Selectize.define("display_count", function (options) {
 	        var self = this;
 
@@ -3165,7 +3165,7 @@
 		this.onBlur = (function () {
 			var original = self.onBlur;
 			return function (e, dest) {
-				if (!dest || dest === $('.' + options.selectAllButtonClass)[0]) {
+				if (!dest || $(dest).is('.' + options.selectAllButtonClass)) {
 					if (e) {
 						e.preventDefault();
 					}
